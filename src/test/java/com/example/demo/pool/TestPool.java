@@ -1,5 +1,6 @@
 package com.example.demo.pool;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,10 +41,10 @@ public class TestPool
         pool = new Pool<ExportingProcess>(abc);
     }
 
-//    @After
-//    public void tearDown() {
-//        pool.shutdown();
-//    }
+    @After
+    public void tearDown() {
+        pool = null;
+    }
 
     @Test
     public void testObjectPool() {
